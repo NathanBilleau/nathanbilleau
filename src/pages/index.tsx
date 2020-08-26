@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import "../styles/global.scss"
 
 import SEO from "../components/seo"
@@ -8,6 +8,7 @@ import Project from '../components/Project'
 
 const IndexPage = ({data}) => {
   const projects = data.projects
+
   return (
   <>
     <SEO title="Home" />
@@ -28,6 +29,11 @@ const IndexPage = ({data}) => {
               <Project key={project.node.id} pic={project.node.frontmatter.pic} title={project.node.frontmatter.title} html={project.node.html}/>
             ))
           }
+          <div className="pagination">
+            <span>01</span>
+            <span>/0{projects.edges.length}</span>
+          </div>
+          <Link to="project" className="readMore">+   En savoir plus</Link>
         </div>
       </div>
       

@@ -78,12 +78,36 @@ $border: 100px;
 
 .projectsContainer {
     background-color: #000;
-    display: grid;
-    gap: 100px;
+
+    .readMore,
+    .pagination {
+        bottom: 100px;
+        position: fixed;
+        color: #fff;
+        z-index: 0;
+    }
+
+    .readMore {
+        right: 100px;
+        color: #fff;
+        text-decoration: none;
+        font-weight: 300;
+    }
+
+    .pagination {
+        bottom: 100px;
+        font-weight: 700;
+
+        span:first-child {
+            font-size: 1.5em;
+            color: transparent;
+            -webkit-text-stroke: 1px #fff;
+        }
+    }
 
     .Project {
         height: calc(100vh - 200px)!important;
-        display: block;
+        margin: 50px 0;
 
         h3 {
             display: inline-block;
@@ -93,7 +117,7 @@ $border: 100px;
             background-color: #fff;
             text-transform: uppercase;
             box-shadow: 0 0 50px rgba(0, 0, 0, .3);
-            z-index: 999;
+            z-index: 2;
             transform: translateY(30px);
         }
 
@@ -101,19 +125,23 @@ $border: 100px;
             width: 100%;
             display: grid;
             grid-template-columns: 20vw auto;
-            gap: 100px;
+            gap: 50px;
             position: absolute;
             right: 100px;
-            align-items: center;
+            align-items: flex-end;
 
             p {
                 color: #fff;
+                font-weight: 300;
+                z-index: 1;
             }
 
             .thumbnail {
                 height: 20vw;
                 width: 20vw;
                 box-shadow: 0 0 50px rgba(0, 0, 0, .3);
+                z-index: 1;
+                position: relative;
             }
         }
     }
