@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;700;900&display=swap');
+$border: 100px;
 
 * {
     font-family: 'Jost';
@@ -24,25 +25,15 @@
 }
 
 
-
-
-
 .container {
     display: grid;
     grid-template-columns: 1.5fr 1fr;
-    height: 100vh;
 
     .gridItem {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-
-        &.left {
-            border-left: 1px solid #000;
-            border-bottom: 1px solid #000;    
-            margin: 100px;
-        }
+        padding: $border;
+        display: grid;
+        justify-items: stretch;
+        position: relative;
 
         &.white {
             background-color: #fff;
@@ -51,20 +42,79 @@
         &.black {
             background-color: #000;
         }
+
+        .presentation {
+            border-left:1px solid black;
+            border-bottom:1px solid black;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            height: calc(100vh - 100px * 2);
+            position: fixed;
+            width: calc(2 / 3 * 100% - #{$border} * 3);
+
+            h1 {
+                font-weight: 700;
+                font-size: 6em;
+                line-height: 1em;
+                padding: 0;
+                margin: 0;
+                text-align: center;
+            }
+            
+            h2 {
+                font-weight: 300;
+                font-size: 1.2em;
+                margin: 20px 0;
+            }
+        }
     }
 }
 
-h1 {
-    font-weight: 700;
-    font-size: 5em;
-    max-width: 30%;
-    line-height: 1em;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-}
 
-p {
-    font-weight: 300;
-    margin: 20px 0;
+
+.projectsContainer {
+    background-color: #000;
+    display: grid;
+    gap: 100px;
+
+    .Project {
+        height: calc(100vh - 200px)!important;
+        display: block;
+
+        h3 {
+            display: inline-block;
+            position: relative;
+            font-size: 3em;
+            padding: 5px 40px;
+            background-color: #fff;
+            text-transform: uppercase;
+            box-shadow: 0 0 50px rgba(0, 0, 0, .3);
+            z-index: 999;
+            transform: translateY(30px);
+        }
+
+        .contentContainer {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 20vw auto;
+            gap: 100px;
+            position: absolute;
+            right: 100px;
+            align-items: center;
+
+            p {
+                color: #fff;
+            }
+
+            .thumbnail {
+                height: 20vw;
+                width: 20vw;
+                box-shadow: 0 0 50px rgba(0, 0, 0, .3);
+            }
+        }
+    }
 }

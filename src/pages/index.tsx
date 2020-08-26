@@ -1,27 +1,70 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby"
 import "../styles/global.scss"
 
 import SEO from "../components/seo"
 import Alink from '../components/Alink'
+import Project from '../components/Project'
 
-const IndexPage = () => (
+const IndexPage = ({data}) => {
+  const projects = data.projects
+  return (
   <>
     <SEO title="Home" />
     <div className="container">
 
-      <div className="gridItem left white">
-        <h1>Nathan Billeau</h1>
-        <p>étudiant, autodidacte, développeur front-end</p>
-        <Alink link="mailto:nbilleau@gmail.com" text="me contacter" color="black" /> 
+      <div className="gridItem white">
+        <div className="presentation">
+          <h1>Nathan<br />Billeau</h1>
+          <h2>étudiant, autodidacte, développeur front-end</h2>
+          <Alink link="mailto:nbilleau@gmail.com" text="me contacter" color="black" /> 
+        </div>
       </div>
 
-      <div className="gridItem right black">
-
+      <div className="gridItem black">
+        <div className="projectsContainer">
+          {
+            projects.edges.map(project => (
+              <Project key={project.node.id} pic={project.node.frontmatter.pic} title={project.node.frontmatter.title} html={project.node.html}/>
+            ))
+          }
+        </div>
       </div>
       
     </div>
   </>
-)
+)}
 
 export default IndexPage
+
+
+export const data = graphql`
+{
+  projects: allMarkdownRemark {
+    edges {
+      node {
+        id
+        html
+        frontmatter {
+          date
+          title
+          pic {
+              relativePath
+              childImageSharp {
+              fluid(maxWidth: 700) {
+                ...GatsbyImageSharpFluid
+              }
+
+              fixed {
+                ...GatsbyImageSharpFixed
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+`
