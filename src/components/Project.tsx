@@ -1,6 +1,5 @@
 import React from 'react'
 import Image from 'gatsby-image'
-import { Link } from 'gatsby'
 
 const Project = ({title, html, pic}) => (
     <div className="Project">

@@ -78,6 +78,8 @@ $border: 100px;
 
 .projectsContainer {
     background-color: #000;
+    display: grid;
+    gap: 100px;
 
     .readMore,
     .pagination {
@@ -107,7 +109,6 @@ $border: 100px;
 
     .Project {
         height: calc(100vh - 200px)!important;
-        margin: 50px 0;
 
         h3 {
             display: inline-block;
@@ -118,7 +119,7 @@ $border: 100px;
             text-transform: uppercase;
             box-shadow: 0 0 50px rgba(0, 0, 0, .3);
             z-index: 2;
-            transform: translateY(30px);
+            transform: translateY(50%);
         }
 
         .contentContainer {
@@ -130,7 +131,7 @@ $border: 100px;
             right: 100px;
             align-items: flex-end;
 
-            p {
+            div {
                 color: #fff;
                 font-weight: 300;
                 z-index: 1;
