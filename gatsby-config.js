@@ -25,14 +25,16 @@ module.exports = {
     `gatsby-transformer-remark`,
     `gatsby-plugin-sharp`,
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-webfonts`,
       options: {
-        fonts: [
-          {
-            family: 'Jost',
-            subsets: [`300`, `400`, `700`, `900`]
-          }
-        ]
+        fonts: {
+          google: [
+            {
+              family: `Jost`,
+              variants: [`300`, `400`, `700`, `900`]
+            }
+          ]
+        }
       }
     }
     // this (optional) plugin enables Progressive Web App + Offline functionality
