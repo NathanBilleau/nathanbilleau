@@ -24,7 +24,7 @@ const IndexPage = ({data}) => {
         let i = Math.round((window.scrollY + 100) / height)
 
         if (window.innerWidth <= 700) {
-          i = Math.round(((window.scrollY - (.9 * height)) + 50) / height)
+          i = Math.round(((window.scrollY - (.85 * height)) + 50) / height)
 
           if(i === -1) {
             i = 0
@@ -34,10 +34,11 @@ const IndexPage = ({data}) => {
           }
         }
 
-        setCurrentProject({
-          number: i + 1,
-          link: projects.edges[i].node.fields.slug
-        })
+          setCurrentProject({
+            number: i + 1,
+            link: projects.edges[i].node.fields.slug
+          })
+
 
       })
   }, [])

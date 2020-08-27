@@ -164,7 +164,7 @@ $border: 100px;
                 border-left:1px solid black;
                 border-bottom:1px solid black;
 
-                height: calc(90vh - #{$border} * 2);
+                height: calc(85vh - #{$border} * 2);
                 position: relative;
                 width: 100%;
 
@@ -191,8 +191,15 @@ $border: 100px;
             position: fixed;
         }
 
+        .pagination {
+            transform-origin: 0 100%;
+            transform: rotate(-90deg);
+        }
+
         .readMore {
             right: $border;
+            transform-origin: 100% 100%;
+            transform: rotate(-90deg) translate(100%, 100%);
         }
 
         .Project {
