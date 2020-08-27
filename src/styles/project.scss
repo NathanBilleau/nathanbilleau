@@ -42,8 +42,8 @@ main {
 
     .projectLink {
         position: absolute;
-        bottom: 110px;
-        right: calc(100vh - #{$border} * 4 + 2vw / 2);
+        bottom: calc(#{$border} + 8px );
+        right: calc(100vh - #{$border} * 4 - 5vw / 2);
     }
 
     .descriptionContainer {
@@ -94,6 +94,71 @@ main {
         img {
             height: 100%;
             width: 100%;
+        }
+    }
+}
+
+@media screen AND (max-width: 700px) {
+    $border: $border / 2;
+    
+    main {
+        width: 100vw;
+        height: auto;
+    
+        .projectContainer {
+            border-left:1px solid #fff;
+            border-bottom:1px solid #fff;
+            display: block;
+            height: auto;
+            margin: $border 0;
+            width: calc(100vw - 2.5 * #{$border});
+            padding-left: $border / 2;
+        }
+    
+        .date {
+            bottom: $border;
+            right: $border;
+            
+            h2 {
+                font-size: 1em;
+            }
+        }
+    
+        .projectLink {
+            bottom: calc(#{$border} + 8px );
+            right: auto;
+            left: $border;
+            font-size: 1em;
+        }
+    
+        .descriptionContainer {
+            padding-left: 0;
+    
+            h1 {
+                font-size: 2em;
+                padding: 5px 30px;
+            }
+        
+            p {
+                margin: 50px 0;
+                max-width: 100%;
+            }
+        }
+    
+        
+    
+        .picsContainer {
+            display: grid;
+            grid-template: none;
+            gap: $border / 2;
+            height: auto;
+            width: 100%;
+            margin: $border 0;
+    
+            .gatsby-image-wrapper {
+                height: calc(100vw - #{$border} * 2.5)!important;
+                width: calc(100vw - #{$border} * 2.5)!important;
+            }
         }
     }
 }
