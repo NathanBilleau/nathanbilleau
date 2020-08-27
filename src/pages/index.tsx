@@ -52,8 +52,8 @@ const IndexPage = ({data}) => {
             ))
           }
           <div className="pagination">
-            <span>{currentProject.number}</span>
-            <span>/0{projects.edges.length}</span>
+            <span>{currentProject.number < 10 ? `0${currentProject.number}` : currentProject.number}</span>
+            <span>/{projects.edges.length < 10 ? `0${projects.edges.length}` : projects.edges.length}</span>
           </div>
           <Link to={currentProject.link} className="readMore">+   En savoir plus</Link>
         </div>
