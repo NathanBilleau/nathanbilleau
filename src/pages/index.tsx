@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
-import "../styles/global.scss"
+import "../styles/index.scss"
 
 import SEO from "../components/seo"
 import Alink from '../components/Alink'
