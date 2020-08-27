@@ -48,7 +48,7 @@ const IndexPage = ({data}) => {
         <div className="projectsContainer">
           {
             projects.edges.map(project => (
-              <Project key={project.node.id} pic={project.node.frontmatter.pics[0]} title={project.node.frontmatter.title} html={project.node.html}/>
+              <Project key={project.node.id} slug={project.node.fields.slug} pic={project.node.frontmatter.pics[0]} title={project.node.frontmatter.title} html={project.node.html}/>
             ))
           }
           <div className="pagination">
