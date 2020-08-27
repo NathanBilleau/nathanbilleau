@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { graphql, Link } from "gatsby"
 import "../styles/index.scss"
 
@@ -8,6 +8,28 @@ import Project from '../components/Project'
 
 const IndexPage = ({data}) => {
   const projects = data.projects
+  const [currentProject, setCurrentProject] = useState({
+    number: 1,
+    link: 'spelfilm'
+  })
+
+  useEffect(() => {
+      let height = window.innerHeight
+      window.addEventListener('resize', () => {
+        height = window.innerHeight
+      })
+
+      
+      window.addEventListener('scroll', () => {
+        let i = Math.round((window.scrollY + 100) / height)
+
+          setCurrentProject({
+            number: i + 1,
+            link: projects.edges[i].node.fields.slug
+          })
+
+      })
+  }, [])
 
   return (
   <>
@@ -30,10 +52,10 @@ const IndexPage = ({data}) => {
             ))
           }
           <div className="pagination">
-            <span>01</span>
+            <span>{currentProject.number}</span>
             <span>/0{projects.edges.length}</span>
           </div>
-          <Link to="project" className="readMore">+   En savoir plus</Link>
+          <Link to={currentProject.link} className="readMore">+   En savoir plus</Link>
         </div>
       </div>
       
@@ -51,6 +73,9 @@ export const data = graphql`
       node {
         id
         html
+        fields {
+          slug
+        }
         frontmatter {
           date
           title
