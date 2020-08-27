@@ -22,7 +22,7 @@ const ProjectTemplate = ({data}) => {
                     <ul>
                         {
                             project.frontmatter.technos.map(tech => (
-                                <li>{tech}</li>
+                                <li key={tech}>{tech}</li>
                             ))
                         }
                     </ul>
@@ -31,7 +31,7 @@ const ProjectTemplate = ({data}) => {
                 <div className="picsContainer">
                     {
                         project.frontmatter.pics.map(pic => (
-                            <Image fluid={pic.childImageSharp.fluid} />
+                            <Image key={pic.id} fluid={pic.childImageSharp.fluid} />
                         ))
                     }
                 </div>
@@ -65,6 +65,7 @@ query($slug: String!) {
             technos
             link
             pics {
+                id
                 childImageSharp {
                     fluid(maxWidth: 400) {
                         ...GatsbyImageSharpFluid
