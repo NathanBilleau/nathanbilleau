@@ -26,7 +26,7 @@ const IndexPage = ({data}) => {
         <div className="projectsContainer">
           {
             projects.edges.map(project => (
-              <Project key={project.node.id} pic={project.node.frontmatter.pic} title={project.node.frontmatter.title} html={project.node.html}/>
+              <Project key={project.node.id} pic={project.node.frontmatter.pics[0]} title={project.node.frontmatter.title} html={project.node.html}/>
             ))
           }
           <div className="pagination">
@@ -54,7 +54,7 @@ export const data = graphql`
         frontmatter {
           date
           title
-          pic {
+          pics {
               relativePath
               childImageSharp {
               fluid(maxWidth: 700) {
