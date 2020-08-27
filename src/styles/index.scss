@@ -113,7 +113,7 @@ $border: 100px;
             display: inline-block;
             position: relative;
             font-size: 3em;
-            padding: 5px 40px;
+            padding: 5px 5vw;
             background-color: #fff;
             text-transform: uppercase;
             box-shadow: 0 0 50px rgba(0, 0, 0, .3);
@@ -202,6 +202,8 @@ $border: 100px;
                 display: inline-block;
                 font-size: 2em;
                 transform: translateY(0);
+                margin: auto;
+                text-align: center;
             }
 
             .contentContainer {
@@ -210,9 +212,14 @@ $border: 100px;
                 position: absolute;
                 right: $border;
 
+                p {
+                    font-size: .9em;
+                    text-align: center;
+                }
+
                 .thumbnail {
-                    height: calc(100vw - 2 * #{$border});
-                    width: calc(100vw - 2 * #{$border});
+                    height: calc(100vw - 4 * #{$border});
+                    width: calc(100vw - 4 * #{$border});
                     margin: 20px auto;
                 }
             }
