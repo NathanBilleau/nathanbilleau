@@ -51,7 +51,7 @@ $border: 100px;
             justify-content: center;
             align-items: center;
 
-            height: calc(100vh - 100px * 2);
+            height: calc(100vh - #{$border} * 2);
             position: fixed;
             width: calc(2 / 3 * 100% - #{$border} * 3);
 
@@ -78,25 +78,25 @@ $border: 100px;
 .projectsContainer {
     background-color: #000;
     display: grid;
-    gap: 100px;
+    gap: $border;
 
     .readMore,
     .pagination {
-        bottom: 100px;
+        bottom: $border;
         position: fixed;
         color: #fff;
         z-index: 0;
     }
 
     .readMore {
-        right: 100px;
+        right: $border;
         color: #fff;
         text-decoration: none;
         font-weight: 300;
     }
 
     .pagination {
-        bottom: 100px;
+        bottom: $border;
         font-weight: 700;
 
         span:first-child {
@@ -128,7 +128,7 @@ $border: 100px;
             grid-template-columns: 20vw auto;
             gap: 50px;
             position: absolute;
-            right: 100px;
+            right: $border;
             align-items: flex-end;
 
             div {
@@ -143,6 +143,78 @@ $border: 100px;
                 box-shadow: 0 0 50px rgba(0, 0, 0, .3);
                 z-index: 1;
                 position: relative;
+            }
+        }
+    }
+}
+
+@media screen AND (max-width: 700px) {
+    $border: $border / 2;
+
+    .container {
+        display: block;
+
+        .gridItem {
+            padding: #{$border};
+            display: grid;
+            justify-items: stretch;
+            position: relative;
+
+            .presentation {
+                border-left:1px solid black;
+                border-bottom:1px solid black;
+
+                height: calc(90vh - #{$border} * 2);
+                position: relative;
+                width: 100%;
+
+                h1 {
+                    font-size: 3em;
+                }
+                
+                h2 {
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+
+
+    .projectsContainer {
+        display: grid;
+        gap: $border;
+
+        .readMore,
+        .pagination {
+            bottom: $border;
+            position: fixed;
+        }
+
+        .readMore {
+            right: $border;
+        }
+
+        .Project {
+            height: calc(100vh - 200px)!important;
+
+            h3 {
+                display: inline-block;
+                font-size: 2em;
+                transform: translateY(0);
+            }
+
+            .contentContainer {
+                width: calc(100% - #{$border * 2});
+                display: block;
+                position: absolute;
+                right: $border;
+
+                .thumbnail {
+                    height: calc(100vw - 2 * #{$border});
+                    width: calc(100vw - 2 * #{$border});
+                    margin: 20px auto;
+                }
             }
         }
     }

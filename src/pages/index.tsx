@@ -23,10 +23,21 @@ const IndexPage = ({data}) => {
       window.addEventListener('scroll', () => {
         let i = Math.round((window.scrollY + 100) / height)
 
-          setCurrentProject({
-            number: i + 1,
-            link: projects.edges[i].node.fields.slug
-          })
+        if (window.innerWidth <= 700) {
+          i = Math.round(((window.scrollY - (.9 * height)) + 50) / height)
+
+          if(i === -1) {
+            i = 0
+          }
+          else {
+            i = Math.abs(i)
+          }
+        }
+
+        setCurrentProject({
+          number: i + 1,
+          link: projects.edges[i].node.fields.slug
+        })
 
       })
   }, [])
