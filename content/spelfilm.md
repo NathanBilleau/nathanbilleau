@@ -1,7 +1,7 @@
 ---
 title: spelfilm
 date: 2020-05-20
-pics: ['./images/spelfilm.jpg', './images/blog.png']
+pics: ['./images/spelfilm.jpg']
 link: 'https://play.google.com/store/apps/details?id=com.spelfilm'
 technos: ['react native', 'firebase', 'the movie database']
 ---

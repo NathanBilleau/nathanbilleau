@@ -1,7 +1,7 @@
 ---
 title: blog
 date: 2020-05-20
-pics: ['./images/blog.png', './images/blog.png', './images/blog.png', './images/blog.png']
+pics: ['./images/blog.png']
 link: 'https://nathanbilleau-blog.netlify.app/'
 technos: ['gatsby']
 ---
