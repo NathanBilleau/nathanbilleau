@@ -235,8 +235,8 @@ $border: 100px;
                 }
 
                 .thumbnail {
-                    height: calc(100vw - 4 * #{$border});
-                    width: calc(100vw - 4 * #{$border});
+                    height: calc(100vw - 3 * #{$border});
+                    width: calc(100vw - 3 * #{$border});
                     margin: 20px auto;
                 }
             }

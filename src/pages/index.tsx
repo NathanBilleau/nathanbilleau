@@ -127,7 +127,7 @@ export const data = graphql`
             pics {
               relativePath
               childImageSharp {
-                fluid(maxWidth: 700) {
+                fluid(maxWidth: 500) {
                   ...GatsbyImageSharpFluid
                 }
 
