@@ -79,7 +79,7 @@ const IndexPage = ({ data }) => {
                 slug={project.node.fields.slug}
                 pic={project.node.frontmatter.pics[0]}
                 title={project.node.frontmatter.title}
-                html={project.node.html}
+                excerpt={project.node.excerpt}
               />
             ))}
             <div className="pagination">
@@ -113,11 +113,11 @@ export default IndexPage
 
 export const data = graphql`
   {
-    projects: allMarkdownRemark {
+    projects: allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}) {
       edges {
         node {
           id
-          html
+          excerpt
           fields {
             slug
           }
