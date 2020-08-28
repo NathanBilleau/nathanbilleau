@@ -1,7 +1,7 @@
 import React, { useEffect, useState, createRef } from "react"
 import { graphql, Link } from "gatsby"
-import Lottie from 'lottie-web'
-import readMoreAnimation from '../animations/data.json'
+import Lottie from "lottie-web"
+import readMoreAnimation from "../animations/data.json"
 import "../styles/index.scss"
 
 import SEO from "../components/seo"
@@ -44,13 +44,11 @@ const IndexPage = ({ data }) => {
 
     Lottie.loadAnimation({
       container: readMoreAnimationContainer.current,
-      render: 'svg',
+      render: "svg",
       loop: true,
       autoplay: true,
-      animationData: readMoreAnimation
+      animationData: readMoreAnimation,
     })
-
-
   }, [])
 
   return (
@@ -98,7 +96,11 @@ const IndexPage = ({ data }) => {
               </span>
             </div>
             <Link to={currentProject.link} className="readMore">
-              <div className="readMoreAnimation" ref={readMoreAnimationContainer}></div> En savoir plus
+              <div
+                className="readMoreAnimation"
+                ref={readMoreAnimationContainer}
+              ></div>{" "}
+              En savoir plus
             </Link>
           </div>
         </div>

@@ -1,7 +1,7 @@
 import React, { createRef, useEffect } from "react"
-import Lottie from 'lottie-web'
+import Lottie from "lottie-web"
 
-import listAnimation from '../animations/list.json'
+import listAnimation from "../animations/list.json"
 
 const ListItem = ({ text }) => {
   const animationContainer = createRef()
@@ -9,18 +9,19 @@ const ListItem = ({ text }) => {
   useEffect(() => {
     Lottie.loadAnimation({
       container: animationContainer.current,
-      render: 'svg',
+      render: "svg",
       loop: true,
       autoplay: true,
-      animationData: listAnimation
-  })
+      animationData: listAnimation,
+    })
   }, [])
 
   return (
- <li>
-   <div ref={animationContainer}></div>
-   { text }
- </li>
-)}
+    <li>
+      <div ref={animationContainer}></div>
+      {text}
+    </li>
+  )
+}
 
 export default ListItem

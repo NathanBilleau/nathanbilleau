@@ -2,7 +2,6 @@ import React from "react"
 import Image from "gatsby-image"
 import { graphql } from "gatsby"
 
-
 import SEO from "../components/seo"
 import Alink from "../components/Alink"
 import ListItem from "../components/ListItem"
