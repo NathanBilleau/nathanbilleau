@@ -27,7 +27,7 @@ const ProjectTemplate = ({ data }) => {
 
           <div className="picsContainer">
             {project.frontmatter.pics.map(pic => (
-              <Image key={pic.id} fluid={pic.childImageSharp.fluid} />
+              <Image key={pic.id} fluid={pic.childImageSharp.fluid} alt={pic.name} />
             ))}
           </div>
 
@@ -61,6 +61,7 @@ export const data = graphql`
         link
         pics {
           id
+          name
           childImageSharp {
             fluid(maxWidth: 400) {
               ...GatsbyImageSharpFluid

@@ -125,6 +125,7 @@ export const data = graphql`
             date
             title
             pics {
+              name
               relativePath
               childImageSharp {
                 fluid(maxWidth: 500) {

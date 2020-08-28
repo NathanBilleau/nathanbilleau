@@ -7,7 +7,7 @@ const Project = ({ title, excerpt, pic, slug }) => (
     <div className="Project">
       <h3>{title}</h3>
       <div className="contentContainer">
-        <Image fluid={pic.childImageSharp.fluid} className="thumbnail" />
+        <Image fluid={pic.childImageSharp.fluid} className="thumbnail" alt={pic.name} />
         <div>{excerpt}</div>
       </div>
     </div>
