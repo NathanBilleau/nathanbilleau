@@ -3,6 +3,7 @@ module.exports = {
     title: `Nathan Billeau`,
     description: `étudiant, autodidacte, développeur front-end`,
     author: `@nbilleau`,
+    siteUrl: `https://nathanbilleau.com`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -24,6 +25,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-transformer-remark`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-webfonts`,
       options: {
