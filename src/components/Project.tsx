@@ -3,15 +3,15 @@ import Image from "gatsby-image"
 import { Link } from "gatsby"
 
 const Project = ({ title, excerpt, pic, slug }) => (
-  <Link to={slug}>
     <div className="Project">
-      <h3>{title}</h3>
+      <Link to={slug}>
+        <h3>{title}</h3>
+      </Link>
       <div className="contentContainer">
         <Image fluid={pic.childImageSharp.fluid} className="thumbnail" alt={pic.name} />
         <div>{excerpt}</div>
       </div>
     </div>
-  </Link>
 )
 
 export default Project

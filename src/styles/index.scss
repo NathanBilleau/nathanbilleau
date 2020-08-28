@@ -117,6 +117,16 @@ $border: 100px;
     .Project {
         height: calc(100vh - 200px)!important;
 
+        &:hover {
+            h3 {
+                transform: translateY(60%) scale(1.05);
+            }
+
+            .thumbnail {
+                transform: scale(1.05);
+            }
+        }
+
         h3 {
             display: inline-block;
             position: relative;
@@ -128,6 +138,7 @@ $border: 100px;
             z-index: 2;
             transform: translateY(50%);
             color: #000;
+            transition: .2s;
         }
 
         .contentContainer {
@@ -151,6 +162,7 @@ $border: 100px;
                 box-shadow: 0 0 50px rgba(0, 0, 0, .3);
                 z-index: 1;
                 position: relative;
+                transition: .5s;
             }
         }
     }
