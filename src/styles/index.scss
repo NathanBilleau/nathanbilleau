@@ -164,7 +164,7 @@ $border: 100px;
                 border-left:1px solid black;
                 border-bottom:1px solid black;
 
-                height: calc(85vh - #{$border} * 2);
+                height: calc(85vh - #{$border} * 4);
                 position: relative;
                 width: 100%;
 
@@ -189,6 +189,7 @@ $border: 100px;
         .pagination {
             bottom: $border;
             position: fixed;
+            font-size: .9em;
         }
 
         .pagination {
@@ -203,7 +204,7 @@ $border: 100px;
         }
 
         .Project {
-            height: calc(100vh - 200px)!important;
+            height: calc(100vh - #{$border} * 2)!important;
 
             h3 {
                 display: inline-block;
