@@ -72,10 +72,14 @@ main {
             list-style-type: none;
     
             li {
-    
-                &::before {
-                    content: 'x';
-                    margin-right: 20px;
+                margin: 5px 0;
+                
+                div{
+                    height: 1.1em;
+                    width: 1.1em;
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin-right: 1em;
                 }
             }
         }
