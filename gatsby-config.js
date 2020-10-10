@@ -8,6 +8,7 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
+    `gatsby-plugin-netlify-cms-paths`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
