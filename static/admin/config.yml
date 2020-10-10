@@ -19,9 +19,7 @@ collections:
       - {label: "Link", name: "link", widget: "string"}
       - label: "Images"
         name: "pics"
-        widget: "image"
-        media_library:
-          config:
-            multiple: true
+        widget: "list"
+        field: {name: image, label: Image, widget: image}
       - {label: Technos, name: technos, widget: list}
       - {label: "Body", name: "body", widget: "markdown"}
