@@ -20,5 +20,7 @@ collections:
       - label: "Images"
         name: "pics"
         widget: "image"
-        allow_multiple: true
+        media_library:
+          config:
+            multiple: true
       - {label: "Body", name: "body", widget: "markdown"}
