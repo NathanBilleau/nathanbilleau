@@ -19,9 +19,6 @@ collections:
       - {label: "Link", name: "link", widget: "string"}
       - label: "Images"
         name: "pics"
-        widget: "list"
-        field:
-          - name: Image
-            label: image
-            widget: image
+        widget: "image"
+        allow_multiple: true
       - {label: "Body", name: "body", widget: "markdown"}
