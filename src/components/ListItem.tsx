@@ -3,13 +3,17 @@ import Lottie from "lottie-web"
 
 import listAnimation from "../animations/list.json"
 
-const ListItem = ({ text }) => {
+interface propsType {
+  text: string
+}
+
+const ListItem = ({ text }: propsType) => {
   const animationContainer = createRef()
 
   useEffect(() => {
     Lottie.loadAnimation({
-      container: animationContainer.current,
-      render: "svg",
+      container: document.querySelector("#animation"),
+      renderer: "svg",
       loop: true,
       autoplay: true,
       animationData: listAnimation,
@@ -18,7 +22,7 @@ const ListItem = ({ text }) => {
 
   return (
     <li>
-      <div ref={animationContainer}></div>
+      <div id="animation"></div>
       {text}
     </li>
   )
