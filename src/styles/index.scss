@@ -7,7 +7,7 @@ $border: 100px;
 }
 
 .Alink {
-    padding: 8px 5vw;
+    padding: 8px 3vw;
     font-weight: 300;
     text-align: center;
     text-decoration: none;
@@ -54,6 +54,11 @@ $border: 100px;
             height: calc(100vh - #{$border} * 2);
             position: fixed;
             width: calc(1.5 / 2.5 * 100% - #{$border} * 3);
+
+            .linksContainer {
+                display: flex;
+                gap: 10px;
+            }
 
             h1 {
                 font-weight: 700;

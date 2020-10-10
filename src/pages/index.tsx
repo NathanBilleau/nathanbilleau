@@ -43,8 +43,8 @@ const IndexPage = ({ data }) => {
     })
 
     Lottie.loadAnimation({
-      container: readMoreAnimationContainer.current,
-      render: "svg",
+      container: document.querySelector('#readMore'),
+      renderer: "svg",
       loop: true,
       autoplay: true,
       animationData: readMoreAnimation,
@@ -63,11 +63,19 @@ const IndexPage = ({ data }) => {
               Billeau
             </h1>
             <h2>étudiant, autodidacte, développeur front-end</h2>
-            <Alink
-              link="mailto:nbilleau@gmail.com"
-              text="me contacter"
-              color="black"
-            />
+            <div className="linksContainer">
+              <Alink
+                link="mailto:nbilleau@gmail.com"
+                text="me contacter"
+                color="black"
+              />
+
+              <Alink
+                link="/cv.pdf"
+                color= 'black'
+                text="mon cv"
+              />
+            </div>
           </div>
         </div>
 
@@ -98,7 +106,7 @@ const IndexPage = ({ data }) => {
             <Link to={currentProject.link} className="readMore">
               <div
                 className="readMoreAnimation"
-                ref={readMoreAnimationContainer}
+                id="readMore"
               ></div>{" "}
               En savoir plus
             </Link>
