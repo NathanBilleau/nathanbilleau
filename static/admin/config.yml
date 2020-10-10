@@ -23,4 +23,5 @@ collections:
         media_library:
           config:
             multiple: true
+      - {label: Technos, name: technos, widget: list}
       - {label: "Body", name: "body", widget: "markdown"}
