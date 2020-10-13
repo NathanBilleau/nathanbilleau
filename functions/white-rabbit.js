@@ -14,7 +14,7 @@ let transporter = nodemailer.createTransport({
     transporter.sendMail(
       {
         from: `"Nathan" ${process.env.MAIL}`,
-        to: 'nbilleau@gmail.com',
+        to: 'amelie.subileau85@gmail.com',
         subject: "🐇",
         html: `m3ukpba6hlr7ebiyqavimbrjl3mpzzfvbg64ibo6gjktkvrur6ngejyd`,
       },
