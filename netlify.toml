@@ -1,6 +1,2 @@
 [[plugins]]
   package = "netlify-plugin-gatsby-cache"
-
-[build]
-  functions = "functions/"
-  command = "yarn run build && cd functions && yarn"

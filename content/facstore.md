@@ -6,4 +6,4 @@ link: "https://facstore.netlify.app/"
 technos: ["nuxt"]
 ---
 
-Le but était de créer un concept d'une entreprise fictive pour imaginer sa communication et son fonctionnement. [🐇](https://nathanbilleau.com/.netlify/functions/white-rabbit) Avec mon groupe nous avons donc décidé de faire un service de livraison de produits alimentaires qui permet de comparer les prix des différentes enseignes. Le site est en Vue (nuxt).
+Le but était de créer un concept d'une entreprise fictive pour imaginer sa communication et son fonctionnement. Avec mon groupe nous avons donc décidé de faire un service de livraison de produits alimentaires qui permet de comparer les prix des différentes enseignes. Le site est en Vue (nuxt).
