@@ -1,6 +1,6 @@
 ---
 title: HejSwedish
-date: 2020-11-04T11:26:35.994Z
+date: 2020-01-27T11:45:17.832Z
 link: https://twitter.com/HejSwedish
 pics:
   - public/static/screen-shot-2020-11-04-at-12.43.15.png
