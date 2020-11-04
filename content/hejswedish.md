@@ -3,7 +3,7 @@ title: HejSwedish
 date: 2020-11-04T11:26:35.994Z
 link: https://twitter.com/HejSwedish
 pics:
-  - public/static/whatishejswedish.gif
+  - public/static/screen-shot-2020-11-04-at-12.43.15.png
   - public/static/rt48e27l_400x400.jpg
 technos:
   - Nodejs
