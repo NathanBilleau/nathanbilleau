@@ -5,3 +5,28 @@
   from = "/twitter"
   to = "https://twitter.com/nbilleau"
   status = 301
+
+[[redirects]]
+  from = "/instagram"
+  to = "https://instagram.com/nathanbilleau"
+  status = 301
+
+[[redirects]]
+  from = "/github"
+  to = "https://github.com/nathanbilleau"
+  status = 301
+
+[[redirects]]
+  from = "/twitch"
+  to = "https://www.twitch.tv/nathanbilleau"
+  status = 301
+
+[[redirects]]
+  from = "/spotify"
+  to = "https://open.spotify.com/user/k3bulby2da3bx6vpb4yrl69ee?si=HPNzSQJnRvmrco1Xx8AB4Q"
+  status = 301
+
+[[redirects]]
+  from = "/tiktok"
+  to = "https://vm.tiktok.com/ZSgKGvg4/"
+  status = 301
