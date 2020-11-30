@@ -1,6 +1,10 @@
 [[plugins]]
   package = "netlify-plugin-gatsby-cache"
 
+[build]
+  publish = "build"
+  command = "yarn run build"
+
 [[redirects]]
   from = "/twitter"
   to = "https://twitter.com/nbilleau"
@@ -29,4 +33,9 @@
 [[redirects]]
   from = "/tiktok"
   to = "https://vm.tiktok.com/ZSgKGvg4/"
+  status = 301
+
+[[redirects]]
+  from = "/youtube"
+  to = "https://www.youtube.com/channel/UCC8p91cfvnn28Hkm9ks2C6A?view_as=subscriber"
   status = 301
