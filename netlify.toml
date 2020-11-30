@@ -1,2 +1,7 @@
 [[plugins]]
   package = "netlify-plugin-gatsby-cache"
+
+[[redirects]]
+  from = "/twitter"
+  to = "https://twitter.com/nbilleau"
+  status = 301
