@@ -13,4 +13,4 @@ technos:
   - localstorage
 ---
 
-Petit projet svelte d'une heure qui résoud le problème de "Je doit me laver les cheveux aujourd'hui ?" pour les personnes qui se lavent les cheveux un jour sur deux.
+Petit projet Svelte d'une heure qui résoud le problème de "Je doit me laver les cheveux aujourd'hui ?" pour les personnes qui se lavent les cheveux un jour sur deux. Le site peut être ajouté sur l'écran d'accueil du téléphone et être utilisé comme application.
