@@ -1,6 +1,6 @@
 import React from "react"
 import Image from "gatsby-image"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 
 import SEO from "../components/seo"
 import Alink from "../components/Alink"
@@ -14,6 +14,8 @@ const ProjectTemplate = ({ data }) => {
     <>
       <SEO title="Project" />
       <main>
+
+        <Link to="/" className="back">retour</Link>
         <div className="projectContainer">
           <div className="descriptionContainer">
             <h1>{project.frontmatter.title}</h1>
@@ -55,7 +57,7 @@ export const data = graphql`
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {
-        date(formatString: "MMMM YYYY", locale: "FR-fr")
+        date(formatString: "MMM YYYY", locale: "FR-fr")
         title
         technos
         link

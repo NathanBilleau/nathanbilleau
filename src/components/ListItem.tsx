@@ -12,7 +12,7 @@ const ListItem = ({ text }: propsType) => {
 
   useEffect(() => {
     Lottie.loadAnimation({
-      container: document.querySelector("#animation"),
+      container: animationContainer.current,
       renderer: "svg",
       loop: true,
       autoplay: true,
@@ -22,7 +22,7 @@ const ListItem = ({ text }: propsType) => {
 
   return (
     <li>
-      <div id="animation"></div>
+      <div ref={animationContainer}></div>
       {text}
     </li>
   )
