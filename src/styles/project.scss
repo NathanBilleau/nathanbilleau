@@ -1,4 +1,4 @@
-$border: 100px;
+$border: 80px;
 
 * {
     font-family: 'Jost';
@@ -29,14 +29,13 @@ main {
     .date {
         position: absolute;
         color: #fff;
-        bottom: 100px;
-        right: 100px;
+        bottom: $border;
+        right: $border;
         
-
         h2 {
             font-weight: 300;
             text-transform: lowercase;
-            font-size: 1.3em;
+            font-size: 1em;
         }
     }
 

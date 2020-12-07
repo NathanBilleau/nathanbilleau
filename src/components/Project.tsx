@@ -15,15 +15,15 @@ interface propsType {
 }
 
 const Project = ({ title, excerpt, pic, slug }: propsType) => (
-    <div className="Project">
-      <Link to={slug}>
-        <h3>{title}</h3>
-      </Link>
-      <div className="contentContainer">
-        <Image fluid={pic.childImageSharp.fluid} className="thumbnail" alt={pic.name} />
-        <div>{excerpt}</div>
-      </div>
-    </div>
+    <Link to={slug}>
+      <article className="Project">
+        <h1>{title}</h1>
+        <div className="contentContainer">
+          <Image fluid={pic.childImageSharp.fluid} className="thumbnail" alt={pic.name} />
+          <div>{excerpt}</div>
+        </div>
+     </article>
+    </Link>
 )
 
 export default Project

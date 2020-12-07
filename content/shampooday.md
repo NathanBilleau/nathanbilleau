@@ -1,5 +1,5 @@
 ---
-title: ShampooDay
+title: ShampooDay aaaaaa
 date: 2020-12-03T11:45:17.832Z
 link: https://shampooday.netlify.app
 pics:
