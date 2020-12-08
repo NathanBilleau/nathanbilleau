@@ -190,6 +190,8 @@ a {
     }
 }
 
+
+
 @media screen AND (max-width: 1200px) {
     .Project {
         h1 {
@@ -198,15 +200,7 @@ a {
     }
 }
 
-@media screen AND (max-width: 1000px) {
-    .container {
-        grid-template-columns: 1fr 1fr;
-        
-        .presentation {
-            width: calc(1 / 2 * 100% - #{$border} * 2)!important;
-        }
-    }
-}
+
 
 @media screen AND (max-width: 700px) {
 
