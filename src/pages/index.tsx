@@ -43,7 +43,7 @@ const IndexPage = ({ data }) => {
     })
 
     Lottie.loadAnimation({
-      container: document.querySelector('#readMore'),
+      container: readMoreAnimationContainer.current,
       renderer: "svg",
       loop: true,
       autoplay: true,
@@ -62,7 +62,7 @@ const IndexPage = ({ data }) => {
               <br />
               Billeau
             </h1>
-            <h2>étudiant en MMI, autodidacte, développeur front-end, en alternance chez <a href="https://neemly.fr" target="_blank" rel="noopener noreferrer">Neemly.fr</a></h2>
+            <h2>étudiant en MMI, en alternance chez <a href="https://neemly.fr" target="_blank" rel="noopener noreferrer">Neemly.fr</a></h2>
             <div className="linksContainer">
               <Alink
                 link="mailto:nbilleau@gmail.com"
@@ -107,6 +107,7 @@ const IndexPage = ({ data }) => {
               <div
                 className="readMoreAnimation"
                 id="readMore"
+                ref={readMoreAnimationContainer}
               ></div>{" "}
               En savoir plus
             </Link>

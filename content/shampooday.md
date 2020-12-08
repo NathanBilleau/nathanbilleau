@@ -1,5 +1,5 @@
 ---
-title: ShampooDay aaaaaa
+title: ShampooDay
 date: 2020-12-03T11:45:17.832Z
 link: https://shampooday.netlify.app
 pics:
@@ -11,4 +11,4 @@ technos:
   - localstorage
 ---
 
-Petit projet Svelte d'une heure qui résoud le problème de "Je doit me laver les cheveux aujourd'hui ?" pour les personnes qui se lavent les cheveux un jour sur deux. Le site peut être ajouté sur l'écran d'accueil du téléphone et être utilisé comme application.
+Petit projet Svelte d'une heure qui résoud le problème de "Je dois me laver les cheveux aujourd'hui ?" pour les personnes qui se lavent les cheveux un jour sur deux. Le site peut être ajouté sur l'écran d'accueil du téléphone et être utilisé comme application.

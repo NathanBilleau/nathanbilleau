@@ -1,4 +1,4 @@
-$border: 3vw;
+$border: 5vw;
 
 * {
     font-family: 'Jost';
@@ -30,6 +30,7 @@ a {
 .container {
     display: grid;
     grid-template-columns: 1.5fr 1fr;
+    transition: .2s;
 
     .gridItem {
         padding: $border;
@@ -56,7 +57,7 @@ a {
 
             height: calc(100vh - #{$border} * 2);
             position: fixed;
-            width: calc(1.5 / 2.5 * 100% - #{$border} * 3);
+            width: calc((1.5 / 2.5) * 100% - #{$border} * 2);
 
             .linksContainer {
                 display: grid;
@@ -66,16 +67,17 @@ a {
 
             h1 {
                 font-weight: 700;
-                font-size: 6em;
+                font-size: clamp(3em, 6vw, 6em);
                 line-height: 1em;
                 padding: 0;
                 margin: 0;
                 text-align: center;
+                text-transform: lowercase;
             }
             
             h2 {
                 font-weight: 300;
-                font-size: 1.2em;
+                font-size: 1em;
                 margin: 20px 0;
                 text-align: center;
 
@@ -145,7 +147,7 @@ a {
         }
 
         h1 {
-            font-size: clamp(1.5em, 4vw, 5em);
+            font-size: clamp(2em, 4vw, 5em);
             background-color: rgba(255, 255, 255, .9);
             text-transform: uppercase;
             color: #444;
@@ -158,6 +160,7 @@ a {
             max-width: calc(1 / 2.5 * 100vw - #{$border} * 2);
             mix-blend-mode: screen;
             backdrop-filter: blur(10px);
+            text-transform: lowercase;
         }
 
         .contentContainer {
@@ -187,14 +190,30 @@ a {
     }
 }
 
+@media screen AND (max-width: 1200px) {
+    .Project {
+        h1 {
+            transform: translateY(-200%)!important;
+        }
+    }
+}
+
+@media screen AND (max-width: 1000px) {
+    .container {
+        grid-template-columns: 1fr 1fr;
+        
+        .presentation {
+            width: calc(1 / 2 * 100% - #{$border} * 2)!important;
+        }
+    }
+}
+
 @media screen AND (max-width: 700px) {
-    $border: $border / 2;
 
     .container {
         display: block;
 
         .gridItem {
-            padding: #{$border};
             display: grid;
             justify-items: stretch;
             position: relative;
@@ -206,14 +225,6 @@ a {
                 height: calc(85vh - #{$border} * 4);
                 position: relative;
                 width: 100%;
-
-                h1 {
-                    font-size: 3em;
-                }
-                
-                h2 {
-                    text-align: center;
-                }
             }
         }
     }
@@ -226,39 +237,32 @@ a {
 
         .readMore,
         .pagination {
-            bottom: $border;
-            position: fixed;
-            font-size: .9em;
-        }
-
-        .pagination {
-            transform-origin: 0 100%;
-            transform: rotate(-90deg) translateY(-1em);
-        }
-
-        .readMore {
-            right: $border;
-            transform-origin: 100% 100%;
-            transform: rotate(-90deg) translate(100%, calc(100% + 1em));
-
+            display: none;
         }
 
         .Project {
-            height: calc(100vh - #{$border} * 2)!important;
+            height: fit-content;
+            position: relative;
 
-            h3 {
-                display: inline-block;
-                font-size: 2em;
-                transform: translateY(0);
-                margin: auto;
-                text-align: center;
+            &:hover {
+                h1, .thumbnail {
+                    transform: none;
+                }
+            }
+
+            h1 {
+                padding: 0 20px;
+                transform: translateY(0)!important;
+                top: 0;
+                position: absolute;
+                max-width: 100%;
             }
 
             .contentContainer {
-                width: calc(100% - #{$border * 2});
+                width: 100%;
                 display: block;
                 position: absolute;
-                right: $border;
+                left: 0;
 
                 p {
                     font-size: .9em;
@@ -266,8 +270,8 @@ a {
                 }
 
                 .thumbnail {
-                    height: calc(100vw - 3 * #{$border});
-                    width: calc(100vw - 3 * #{$border});
+                    height: calc(100vw - 2 * #{$border});
+                    width: calc(100vw - 2 * #{$border});
                     margin: 20px auto;
                 }
             }
