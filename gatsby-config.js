@@ -3,7 +3,7 @@ module.exports = {
     title: `Nathan Billeau`,
     description: `étudiant, autodidacte, développeur front-end`,
     author: `@nbilleau`,
-    siteUrl: `https://nathanbilleau.com`,
+    siteUrl: `https://nathanbilleau.fr`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
