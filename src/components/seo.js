@@ -45,7 +45,7 @@ function SEO({ description, lang, meta, title, image, url }) {
         },
         {
           property: `og:title`,
-          content: title,
+          content: `${title} | ${site.siteMetadata.title}`,
         },
         {
           property: `og:description`,
@@ -81,7 +81,7 @@ function SEO({ description, lang, meta, title, image, url }) {
         },
         {
           name: `twitter:title`,
-          content: title,
+          content: `${title} | ${site.siteMetadata.title}`,
         },
         {
           name: `twitter:image`,
@@ -101,7 +101,7 @@ function SEO({ description, lang, meta, title, image, url }) {
 }
 
 SEO.defaultProps = {
-  lang: `en`,
+  lang: `fr`,
   meta: [],
   description: ``,
 }
