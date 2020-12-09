@@ -53,7 +53,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <>
-      <SEO title="Home" />
+      <SEO title="Home" description="étudiant en MMI, en alternance chez Neemly.fr" />
       <div className="container">
         <div className="gridItem white">
           <div className="presentation">
@@ -62,7 +62,7 @@ const IndexPage = ({ data }) => {
               <br />
               Billeau
             </h1>
-            <h2>étudiant en MMI, en alternance chez <a href="https://neemly.fr" target="_blank" rel="noopener noreferrer">Neemly.fr</a></h2>
+            <p>étudiant en MMI, en alternance chez <a href="https://neemly.fr" target="_blank" rel="noopener noreferrer">Neemly.fr</a></p>
             <div className="linksContainer">
               <Alink
                 link="mailto:nbilleau@gmail.com"

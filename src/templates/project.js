@@ -10,9 +10,11 @@ import "../styles/project.scss"
 
 const ProjectTemplate = ({ data }) => {
   const project = data.markdownRemark
+  const url = typeof window !== "undefined" ? window.location.href : ""
+
   return (
     <>
-      <SEO title="Project" />
+      <SEO title={project.frontmatter.title} description={project.excerpt} image={project.frontmatter.pics[0].publicURL} url={url} />
       <main>
 
         <Link to="/" className="back">retour</Link>
@@ -56,6 +58,7 @@ export const data = graphql`
   query($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
+      excerpt
       frontmatter {
         date(formatString: "MMM YYYY", locale: "FR-fr")
         title
@@ -64,6 +67,7 @@ export const data = graphql`
         pics {
           id
           name
+          publicURL
           childImageSharp {
             fluid(maxWidth: 400) {
               ...GatsbyImageSharpFluid

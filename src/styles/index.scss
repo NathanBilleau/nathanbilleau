@@ -75,7 +75,7 @@ a {
                 text-transform: lowercase;
             }
             
-            h2 {
+            p {
                 font-weight: 300;
                 font-size: 1em;
                 margin: 20px 0;
@@ -136,7 +136,7 @@ a {
         align-items: center;
 
         &:hover {
-            h1 {
+            h2 {
                 transform: translateX(-20px) translateY(-75%);
             }
 
@@ -146,7 +146,7 @@ a {
             }
         }
 
-        h1 {
+        h2 {
             font-size: clamp(2em, 4vw, 5em);
             background-color: rgba(255, 255, 255, .9);
             text-transform: uppercase;
@@ -195,7 +195,7 @@ a {
 @media screen AND (max-width: 1200px) {
     .Project {
         padding-top: 2em;
-        h1 {
+        h2 {
             transform: translateY(-200%)!important;
         }
     }
@@ -240,12 +240,12 @@ a {
             position: relative;
 
             &:hover {
-                h1, .thumbnail {
+                h2, .thumbnail {
                     transform: none;
                 }
             }
 
-            h1 {
+            h2 {
                 padding: 0 20px;
                 transform: translateY(0)!important;
                 top: 0;

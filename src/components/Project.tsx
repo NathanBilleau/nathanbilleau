@@ -17,7 +17,7 @@ interface propsType {
 const Project = ({ title, excerpt, pic, slug }: propsType) => (
     <Link to={slug}>
       <article className="Project">
-        <h1>{title}</h1>
+        <h2>{title}</h2>
         <div className="contentContainer">
           <Image fluid={pic.childImageSharp.fluid} className="thumbnail" alt={pic.name} />
           <div>{excerpt}</div>
