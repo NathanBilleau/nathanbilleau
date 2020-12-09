@@ -3,8 +3,8 @@ title: ShampooDay
 date: 2020-12-03T11:45:17.832Z
 link: https://shampooday.netlify.app
 pics:
-  - public/static/sdm1.png
-  - public/static/sdm2.png
+  - ./images/sdm1.png
+  - ./images/sdm2.png
 technos:
   - svelte
   - giphy api

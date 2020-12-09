@@ -3,8 +3,8 @@ title: Podcasts
 date: 2020-11-28T09:56:31.633Z
 link: https://leconomiedupodcast.netlify.app
 pics:
-  - public/static/screen-shot-2020-11-28-at-10.58.10.png
-  - public/static/screen-shot-2020-11-28-at-10.59.03.png
+  - ./images/screen-shot-2020-11-28-at-10.58.10.png
+  - ./images/screen-shot-2020-11-28-at-10.59.03.png
 technos:
   - sapper
 ---
