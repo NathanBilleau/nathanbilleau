@@ -15,7 +15,7 @@ interface propsType {
 }
 
 const Project = ({ title, excerpt, pic, slug }: propsType) => (
-    <Link to={slug}>
+    <Link to={slug} aria-label={title}>
       <article className="Project">
         <h2>{title}</h2>
         <div className="contentContainer">
