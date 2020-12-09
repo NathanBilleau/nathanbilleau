@@ -194,6 +194,7 @@ a {
 
 @media screen AND (max-width: 1200px) {
     .Project {
+        padding-top: 2em;
         h1 {
             transform: translateY(-200%)!important;
         }
@@ -227,7 +228,7 @@ a {
 
     .projectsContainer {
         display: grid;
-        gap: $border;
+        gap: calc(#{$border} * 4);
 
         .readMore,
         .pagination {
