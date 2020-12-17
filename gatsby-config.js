@@ -10,6 +10,12 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-preact`,
     {
+      resolve: `gatsby-plugin-react-helmet-canonical-urls`,
+      options: {
+          siteUrl: `https://nathanbilleau.fr`
+      }
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
