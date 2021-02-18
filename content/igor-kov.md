@@ -1,5 +1,5 @@
 ---
-title: Igor Kov
+title: igorkov.fr
 date: 2020-10-10T15:04:31.120Z
 link: https://igorkov.fr/
 pics:

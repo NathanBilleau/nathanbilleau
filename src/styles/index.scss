@@ -158,7 +158,6 @@ a {
             transform: translateY(-75%);
             word-wrap: break-word;
             max-width: calc(1 / 2.5 * 100vw - #{$border} * 2);
-            mix-blend-mode: screen;
             backdrop-filter: blur(10px);
             text-transform: lowercase;
         }
