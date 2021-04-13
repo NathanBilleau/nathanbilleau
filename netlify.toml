@@ -6,6 +6,10 @@
   command = "yarn run build"
 
 [[redirects]]
+  from = "*"
+  to = "https://amelie-subileau.netlify.app/"
+
+[[redirects]]
   from = "build"
   to = "https://api.netlify.com/api/v1/badges/4f030fdc-e791-4d2e-8c5f-d69752304535/deploy-status"
 
