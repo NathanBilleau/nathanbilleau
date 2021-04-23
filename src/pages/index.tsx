@@ -72,7 +72,7 @@ const IndexPage = ({ data }) => {
 
               <Alink
                 link="/cv.pdf"
-                color= 'black'
+                color='black'
                 text="mon cv"
               />
             </div>

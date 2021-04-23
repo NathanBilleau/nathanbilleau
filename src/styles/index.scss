@@ -16,13 +16,13 @@ a {
     text-align: center;
 
     &.black {
-        background-color: #000;
-        color: #fff;
+        background-color: rgb(20, 20, 20);
+        color: rgb(240, 240, 240);
     }
 
     &.white {
-        background-color: #fff;
-        color: #000;
+        background-color: rgb(240, 240, 240);
+        color: rgb(20, 20, 20);
     }
 }
 
@@ -39,11 +39,11 @@ a {
         position: relative;
 
         &.white {
-            background-color: #fff;
+            background-color: rgb(240, 240, 240);
         }
 
         &.black {
-            background-color: #000;
+            background-color: rgb(20, 20, 20);
         }
 
         .presentation {
@@ -82,7 +82,7 @@ a {
                 text-align: center;
 
                 a {
-                    color: #000;
+                    color: rgb(20, 20, 20);
                 }
             }
         }
@@ -92,7 +92,7 @@ a {
 
 
 .projectsContainer {
-    background-color: #000;
+    background-color: rgb(20, 20, 20);
     display: grid;
     gap: $border;
 
@@ -100,13 +100,13 @@ a {
     .pagination {
         bottom: $border;
         position: fixed;
-        color: #fff;
+        color: rgb(240, 240, 240);
         z-index: 0;
     }
 
     .readMore {
         right: $border;
-        color: #fff;
+        color: rgb(240, 240, 240);
         text-decoration: none;
         font-weight: 300;
 
@@ -126,7 +126,7 @@ a {
         span:first-child {
             font-size: 1.5em;
             color: transparent;
-            -webkit-text-stroke: 1px #fff;
+            -webkit-text-stroke: 1px rgb(240, 240, 240);
         }
     }
 
@@ -148,7 +148,7 @@ a {
 
         h2 {
             font-size: clamp(2em, 4vw, 5em);
-            background-color: #fff;
+            background-color: rgb(240, 240, 240);
             text-transform: uppercase;
             color: #444;
             transition: .5s;
@@ -172,7 +172,7 @@ a {
             align-items: flex-end;
 
             div {
-                color: #fff;
+                color: rgb(240, 240, 240);
                 font-weight: 300;
                 z-index: 1;
             }
