@@ -62,7 +62,7 @@ const IndexPage = ({ data }) => {
               <br />
               Billeau
             </h1>
-            <p>étudiant en MMI, en alternance chez <a href="https://neemly.fr" target="_blank" rel="noopener noreferrer">Neemly.fr</a> et freelance</p>
+            <p>MMI, LP DIWA à Laval et Freelance</p>
             <div className="linksContainer">
               <Alink
                 link="mailto:nbilleau@gmail.com"
