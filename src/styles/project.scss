@@ -29,7 +29,7 @@ $border: 5vw;
 }
 
 main {
-    background: rgb(20, 20, 20);
+    background: #000;
     width: 100vw;
     display: flex;
     justify-content: center;
@@ -43,7 +43,7 @@ main {
         left: calc(#{$border} - 1.3em - 12px);
         position: absolute;
         transform: rotate(-90deg);
-        background-color: rgb(20, 20, 20);
+        background-color: #000;
         padding: 0 10px;
         font-weight: 700;
 
@@ -84,10 +84,10 @@ main {
         color: rgb(240, 240, 240);
         bottom: calc(#{$border} - .8em);
         right: calc(#{$border} + (100vh - #{$border} * 4) );
-        background-color: rgb(20, 20, 20);
+        background-color: #000;
         padding: 0 10px;
         
-        h2 {
+        h3 {
             font-weight: 300;
             text-transform: lowercase;
             font-size: 1em;
@@ -101,7 +101,7 @@ main {
         
         a {
             color: rgb(240, 240, 240) !important;
-            background-color: rgb(20, 20, 20) !important;
+            background-color: #000 !important;
             padding: 0 10px;
             font-weight: 700;
             transition: .2s;
@@ -137,16 +137,31 @@ main {
             position: relative;
             font-size: 3em;
             padding: 5px 40px;
-            background-color: rgb(240, 240, 240);
+            background-color: rgb(255, 255, 255);
             text-transform: lowercase;
             box-shadow: 0 0 50px rgba(0, 0, 0, .3);
         }
     
+        .upcoming {
+            font-size: 1rem;
+            padding: 0 5px;
+            background-color: rgba(255, 198, 0, .9);
+            position: absolute;
+        }
+
         p {
             color: rgb(240, 240, 240);
             font-weight: 300;
-            margin: 50px 0;
+            margin: 10px 0;
             max-width: 60%;
+
+            &:first-of-type {
+                margin-top: 50px;
+            }
+
+            &:last-of-type {
+                margin-bottom: 50px;
+            }
         }
     
         ul {

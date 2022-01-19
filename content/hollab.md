@@ -12,6 +12,7 @@ technos:
   - FaunaDB
   - Stripe
   - Netlify (identity, functions)
+hidden: true
 ---
 
 Hollab est une application web permettant de gérer les tâches de projets collaboratifs. Chaque tâche peut être assignée à un utilisateur, avoir une date limite, et une priorité. Elle diffère des autres applications similaires par son minimalisme et sa simplicité d'utilisation.

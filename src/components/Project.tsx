@@ -12,15 +12,22 @@ interface propsType {
     name: string
   }
   slug: string
+  upcoming: boolean
 }
 
-const Project = ({ title, excerpt, pic, slug }: propsType) => (
+const Project = ({ title, excerpt, pic, slug, upcoming }: propsType) => (
     <Link to={slug} aria-label={title}>
       <article className="Project">
         <h2>{title}</h2>
         <div className="contentContainer">
           <Image fluid={pic.childImageSharp.fluid} className="thumbnail" alt={pic.name} />
-          <div>{excerpt}</div>
+          <div>
+        {
+          upcoming && (
+            <h3>à venir</h3>
+          )
+        }
+          {excerpt}</div>
         </div>
      </article>
     </Link>

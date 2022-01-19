@@ -70,11 +70,11 @@ const IndexPage = ({ data }) => {
                 color="black"
               />
 
-              <Alink
+              {/* <Alink
                 link="/cv.pdf"
                 color='black'
                 text="mon cv"
-              />
+              /> */}
             </div>
           </div>
         </div>
@@ -88,6 +88,7 @@ const IndexPage = ({ data }) => {
                 pic={project.node.frontmatter.pics[0]}
                 title={project.node.frontmatter.title}
                 excerpt={project.node.excerpt}
+                upcoming={project.node.frontmatter.upcoming}
               />
             ))}
             <div className="pagination">
@@ -122,7 +123,7 @@ export default IndexPage
 
 export const data = graphql`
   {
-    projects: allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}) {
+    projects: allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}, filter: { frontmatter: { hidden: { ne: true }}}) {
       edges {
         node {
           id
@@ -133,6 +134,7 @@ export const data = graphql`
           frontmatter {
             date
             title
+            upcoming
             pics {
               name
               relativePath

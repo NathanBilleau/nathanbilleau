@@ -21,6 +21,11 @@ const ProjectTemplate = ({ data }) => {
         <div className="projectContainer">
           <div className="descriptionContainer">
             <h1>{project.frontmatter.title}</h1>
+            {
+              project.frontmatter.upcoming && (
+                <h2 className="upcoming">à venir</h2>
+              )
+            }
             <div dangerouslySetInnerHTML={{ __html: project.html }}></div>
             <ul>
               {project.frontmatter.technos.map(tech => (
@@ -36,7 +41,7 @@ const ProjectTemplate = ({ data }) => {
           </div>
 
           <div className="date">
-            <h2>{project.frontmatter.date}</h2>
+            <h3>{project.frontmatter.date}</h3>
           </div>
 
           <div className="projectLink">
@@ -64,6 +69,7 @@ export const data = graphql`
         title
         technos
         link
+        upcoming
         pics {
           id
           name
