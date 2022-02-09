@@ -9,7 +9,7 @@ pics:
 link: "https://asali.app/"
 technos: 
     - React Native
-    - Parse Plateform
+    - Parse Platform
     - Docker
     - Google MLKit
 upcoming: true
