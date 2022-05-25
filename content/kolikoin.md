@@ -1,7 +1,7 @@
 ---
 title: Kolikoin
 date: 2021-04-20T11:45:17.832Z
-link: https://kolikoin.com/
+link: https://kolikoin.nathanbilleau.fr/
 pics:
   - ./images/kolikoinlogo.png
   - ./images/kolikoin2.png  
