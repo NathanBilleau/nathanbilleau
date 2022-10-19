@@ -53,7 +53,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <>
-      <SEO title="Home" description="étudiant LP DIWA (et ex MMI) à Laval, alternant chez Enerfox et Freelance" lang="fr" />
+      <SEO title="Home" description="Développeur web chez Enerfox et chez Pichenette" lang="fr" />
       <div className="container">
         <div className="gridItem white">
           <div className="presentation">
@@ -62,7 +62,7 @@ const IndexPage = ({ data }) => {
               <br />
               Billeau
             </h1>
-            <p>étudiant LP DIWA (et ex MMI) à Laval, alternant chez Enerfox et Freelance</p>
+            <p>Développeur web chez <a href="https://enerfox.fr" target="_blank">Enerfox</a> et chez <a href="https://pichenette.studio" target="_blank">Pichenette</a></p>
             <div className="linksContainer">
               <Alink
                 link="mailto:nbilleau@gmail.com"
