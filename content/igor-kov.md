@@ -10,5 +10,6 @@ pics:
 technos:
   - gridsome
   - sanity
+state: "hidden"
 ---
 Igor Kov est un photographe et vidéaste basé sur Le Mans et Paris. Son portfolio comporte certaines de ses réalisations, et ses prochains projets.

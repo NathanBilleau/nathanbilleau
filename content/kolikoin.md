@@ -11,6 +11,7 @@ technos:
   - Nodejs
   - NextJS
   - Firestore
+state: "hidden"
 ---
 
 Kolikoin est un bot Twitter qui permet du trading fictif de Bitcoin. Grâce à un simple tweet, il est possible d'acheter ou de vendre du Bitcoin. Chaque utilisateur commence avec $1k. Le nom Kolikoin provient de "kolikko" qui se traduit par monnaie en Finnois.

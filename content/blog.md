@@ -9,6 +9,7 @@ pics:
 link: "https://nathanbilleau-blog.netlify.app/"
 technos: 
     - "gatsby"
+state: "hidden"
 ---
 
 Dans le cadre  d'un cours de communication, je devais écrire cinq articles de blog, j'ai donc décidé de le développer moi même également. La langue du contenu était plutôt libre, donc les articles sont en anglais.

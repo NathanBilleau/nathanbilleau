@@ -9,7 +9,7 @@ technos:
     - React
     - Remotion
     - Spotify API
-upcoming: true
+state: "wip"
 ---
 
 Je stocke mes découvertes musicales du mois dans une playlist et l'idée du projet est d'en faire une vidéo afin des les partager.

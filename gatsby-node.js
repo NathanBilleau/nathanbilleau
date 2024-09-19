@@ -19,7 +19,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
   const results = await graphql(`
     {
-      allMarkdownRemark (filter: { frontmatter: { hidden: { ne: true }}}) {
+      allMarkdownRemark (filter: { frontmatter: { state: { ne: "hidden" }}}) {
         edges {
           node {
             id

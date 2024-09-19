@@ -12,7 +12,7 @@ technos:
     - Parse Platform
     - Docker
     - Google MLKit
-upcoming: true
+state: "stopped"
 ---
 
 Asali est un projet personnel qui résoud l'un de mes problèmes. Lorsque je pars de mon appartement quelques jours, il reste généralement de la nourriture qui ne tarde de périre. J'ai donc imaginé une application qui allait me permettre de recevoir une notification lorsque la date fatidique arrive.

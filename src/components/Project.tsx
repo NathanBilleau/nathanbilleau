@@ -1,36 +1,34 @@
-import React from "react"
-import Image, { FluidObject } from "gatsby-image"
-import { Link } from "gatsby"
+import { Link } from "gatsby";
+import Image, { FluidObject } from "gatsby-image";
+import React from "react";
+import { State, StateTag } from "./Tag";
 
 interface propsType {
-  title: string
-  excerpt: string
+  title: string;
+  excerpt: string;
   pic: {
-    childImageSharp:{
-      fluid: FluidObject
+    childImageSharp: {
+      fluid: FluidObject;
     },
-    name: string
-  }
-  slug: string
-  upcoming: boolean
+    name: string;
+  };
+  slug: string;
+  state: State;
 }
 
-const Project = ({ title, excerpt, pic, slug, upcoming }: propsType) => (
-    <Link to={slug} aria-label={title}>
-      <article className="Project">
-        <h2>{title}</h2>
-        <div className="contentContainer">
-          <Image fluid={pic.childImageSharp.fluid} className="thumbnail" alt={pic.name} />
-          <div>
-        {
-          upcoming && (
-            <h3>à venir</h3>
-          )
-        }
-          {excerpt}</div>
+const Project = ({ title, excerpt, pic, slug, state }: propsType) => (
+  <Link to={slug} aria-label={title}>
+    <article className="Project">
+      <h2>{title}</h2>
+      <div className="contentContainer">
+        <Image fluid={pic.childImageSharp.fluid} className="thumbnail" alt={pic.name} />
+        <div>
+          <StateTag state={state} />
+          {excerpt}
         </div>
-     </article>
-    </Link>
-)
+      </div>
+    </article>
+  </Link>
+);
 
-export default Project
+export default Project;

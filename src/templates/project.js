@@ -1,16 +1,17 @@
-import React from "react"
-import Image from "gatsby-image"
-import { graphql, Link } from "gatsby"
+import { graphql, Link } from "gatsby";
+import Image from "gatsby-image";
+import React from "react";
 
-import SEO from "../components/seo"
-import Alink from "../components/Alink"
-import ListItem from "../components/ListItem"
+import Alink from "../components/Alink";
+import ListItem from "../components/ListItem";
+import SEO from "../components/seo";
 
-import "../styles/project.scss"
+import { StateTag } from '../components/Tag';
+import "../styles/project.scss";
 
 const ProjectTemplate = ({ data }) => {
-  const project = data.markdownRemark
-  const url = typeof window !== "undefined" ? window.location.href : ""
+  const project = data.markdownRemark;
+  const url = typeof window !== "undefined" ? window.location.href : "";
 
   return (
     <>
@@ -21,8 +22,9 @@ const ProjectTemplate = ({ data }) => {
         <div className="projectContainer">
           <div className="descriptionContainer">
             <h1>{project.frontmatter.title}</h1>
+            <StateTag state={project.frontmatter.state} />
             {
-              project.frontmatter.upcoming && (
+              project.frontmatter.state === 'upcoming' && (
                 <h2 className="upcoming">à venir</h2>
               )
             }
@@ -54,10 +56,10 @@ const ProjectTemplate = ({ data }) => {
         </div>
       </main>
     </>
-  )
-}
+  );
+};
 
-export default ProjectTemplate
+export default ProjectTemplate;
 
 export const data = graphql`
   query($slug: String!) {
@@ -69,7 +71,7 @@ export const data = graphql`
         title
         technos
         link
-        upcoming
+        state
         pics {
           id
           name
@@ -83,4 +85,4 @@ export const data = graphql`
       }
     }
   }
-`
+`;

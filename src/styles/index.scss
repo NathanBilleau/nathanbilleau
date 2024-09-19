@@ -162,12 +162,8 @@ a {
             text-transform: lowercase;
         }
 
-        h3 {
-            font-size: 1rem;
-            padding: 0 5px;
-            background-color: rgba(255, 198, 0, .8);
-            position: absolute;
-            transform: translateY(-150%);
+        .stateTag {
+            transform: translateY(-25px);
         }
 
         .contentContainer {

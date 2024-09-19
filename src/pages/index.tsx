@@ -1,12 +1,12 @@
-import React, { useEffect, useState, createRef } from "react"
-import { graphql, Link } from "gatsby"
-import Lottie from "lottie-web"
-import readMoreAnimation from "../animations/data.json"
-import "../styles/index.scss"
+import { graphql, Link } from "gatsby";
+import Lottie from "lottie-web";
+import React, { createRef, useEffect, useState } from "react";
+import readMoreAnimation from "../animations/data.json";
+import "../styles/index.scss";
 
-import SEO from "../components/seo"
-import Alink from "../components/Alink"
-import Project from "../components/Project"
+import Alink from "../components/Alink";
+import Project from "../components/Project";
+import SEO from "../components/seo";
 
 const IndexPage = ({ data }) => {
   const projects = data.projects
@@ -88,7 +88,7 @@ const IndexPage = ({ data }) => {
                 pic={project.node.frontmatter.pics[0]}
                 title={project.node.frontmatter.title}
                 excerpt={project.node.excerpt}
-                upcoming={project.node.frontmatter.upcoming}
+                state={project.node.frontmatter.state}
               />
             ))}
             <div className="pagination">
@@ -123,7 +123,7 @@ export default IndexPage
 
 export const data = graphql`
   {
-    projects: allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}, filter: { frontmatter: { hidden: { ne: true }}}) {
+    projects: allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}, filter: { frontmatter: { state: { ne: "hidden" }}}) {
       edges {
         node {
           id
@@ -134,7 +134,7 @@ export const data = graphql`
           frontmatter {
             date
             title
-            upcoming
+            state
             pics {
               name
               relativePath
