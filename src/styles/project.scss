@@ -244,7 +244,7 @@ main {
         .picsContainer {
             display: grid;
             grid-template: none;
-            gap: $border / 2;
+            gap: calc(#{$border} / 2);
             height: auto;
             width: 100%;
             margin: $border 0;
