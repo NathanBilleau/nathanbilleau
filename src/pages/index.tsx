@@ -53,7 +53,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <>
-      <SEO title="Home" description="Développeur web chez Enerfox et chez Pichenette" lang="fr" />
+      <SEO title="Home" description="Développeur full-stack" lang="fr" />
       <div className="container">
         <div className="gridItem white">
           <div className="presentation">
@@ -62,7 +62,7 @@ const IndexPage = ({ data }) => {
               <br />
               Billeau
             </h1>
-            <p>Développeur web chez <a href="https://enerfox.fr" target="_blank">Enerfox</a> et chez <a href="https://pichenette.studio" target="_blank">Pichenette</a></p>
+            <p>Développeur full-stack</p>
             <div className="linksContainer">
               <Alink
                 link="mailto:nbilleau@gmail.com"
@@ -70,11 +70,11 @@ const IndexPage = ({ data }) => {
                 color="black"
               />
 
-              {/* <Alink
+              <Alink
                 link="/cv.pdf"
                 color='black'
-                text="mon cv"
-              /> */}
+                text="cv"
+              />
             </div>
           </div>
         </div>
